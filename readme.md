@@ -1,8 +1,8 @@
-A small repo dedicated to desigining a CLI tool with Python via the Click and built by the pyinstaller module.
-For details about pyinstaller, see:
+A small repo dedicated to desigining a CLI tool with Python via Click and built by the Pyinstaller module.
+For details, see:
 
 - [Click](https://click.palletsprojects.com/en/stable/)
-- [pyinstaller docs](https://pyinstaller.org/en/stable/)
+- [Pyinstaller docs](https://pyinstaller.org/en/stable/)
 
 ### Instructions
 1. `pip install pyinstaller`

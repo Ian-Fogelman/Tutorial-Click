@@ -21,3 +21,16 @@ For details about pyinstaller, see:
 
     To execute the `return_pokemon` command with the `pokemon` parameter:
     `mycli return_pokemon --pokemon lapras`
+
+
+### Testing
+
+To test Click apps, [you need a runner](https://click.palletsprojects.com/en/stable/testing/).
+
+For simplicity the `runner.py` is located at the root of the directory.
+
+To run the runner.py to test the click cli, run the following command:
+
+```bash
+    python runner.py
+```

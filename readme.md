@@ -29,8 +29,8 @@ To test Click apps, [you need a runner](https://click.palletsprojects.com/en/sta
 
 For simplicity the `runner.py` is located at the root of the directory.
 
-To run the runner.py to test the click cli, run the following command:
+To run the `runner.py` file to test the click cli, run the following command:
 
 ```bash
-    python runner.py
+python runner.py
 ```

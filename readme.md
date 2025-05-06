@@ -13,6 +13,11 @@ For details about pyinstaller, see:
 5. Add the `/dist` folder containing `mycli.exe` to your path variable (Windows):
     ![alt text](static/img/image.png)
 6. Open a new terminal window
-7. Run the following command:
+7. Run the following command(s):
+
+    To execute the `greet` command with the `name` parameter:
     `mycli greet --name Ian`
     ![alt text](static/img/image-1.png)
+
+    To execute the `return_pokemon` command with the `pokemon` parameter:
+    `mycli return_pokemon --pokemon lapras`

@@ -1,0 +1,18 @@
+A small repo dedicated to desigining a CLI tool with Python via the Click and built by the pyinstaller module.
+For details about pyinstaller, see:
+
+- [Click](https://click.palletsprojects.com/en/stable/)
+- [pyinstaller docs](https://pyinstaller.org/en/stable/)
+
+### Instructions
+1. `pip install pyinstaller`
+2. `pip install click`
+2. `pyinstaller --onefile mycli.py`
+3. (Optional) Run the following command: `./dist/mycli --help`
+4. (Optional) Test the following command: `./dist/mycli greet --name Ian`
+5. Add the `/dist` folder containing `mycli.exe` to your path variable (Windows):
+    ![alt text](static/img/image.png)
+6. Open a new terminal window
+7. Run the following command:
+    `mycli greet --name Ian`
+    ![alt text](static/img/image-1.png)

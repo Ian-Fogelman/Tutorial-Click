@@ -6,23 +6,22 @@ For details, see:
 
 ### Instructions
 
-1. `pip install poetry` | `pip install click` #install poetry module
-2. `poetry install` #install project dependencies
-    :::note 
-        If you need to add dependencies again for poetry (it is its own virtual env), use :`poetry add requests`.
-    :::
-3. `poetry run mycli "hello world"` #test the cli
-4. `poetry build` #build the /dist folder
-5. `pip install dist/my_cli_project-0.1.0.tar.gz` # install the cli locally
+1. `pip install poetry` | `pip install click` - install poetry module
+2. `poetry install` - install project dependencies
+    > [!NOTE]  
+    > If you need to add dependencies again for poetry (it is its own virtual env), use :`poetry add requests`.
+3. `poetry run mycli "hello world"` - test the cli
+4. `poetry build` - build the /dist folder
+5. `pip install dist/my_cli_project-0.1.0.tar.gz` - install the cli locally
 6. Open a new terminal window and try the cli: `mycli --help`
-7. (Optional) `poetry publish` #publish to pypi requires credentials
+7. (Optional) `poetry publish` - publish to pypi requires credentials
    ```
     poetry config repositories.my-repo https://my-repo-url/simple/
     poetry config http-basic.my-repo username password
     poetry publish --repository my-repo
    ```
-7. Open a new terminal window
-8. Run the following command(s):
+7. Open a new terminal window.
+   Run the following command(s):
 
     | Command                               | Description                             |
     |---------------------------------------|-----------------------------------------|

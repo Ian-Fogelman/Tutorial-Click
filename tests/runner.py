@@ -1,6 +1,6 @@
 from click.testing import CliRunner
-from mycli import greet
-from mycli import return_pokemon
+from my_cli_project.main import greet
+from my_cli_project.main import return_pokemon
 
 # Test the first CLI command
 runner = CliRunner()

@@ -1,36 +1,40 @@
-A small repo dedicated to desigining a CLI tool with Python via Click and built by the Pyinstaller module.
+A small repo dedicated to desigining a CLI tool with Python via Click and built by the Poetry.
 For details, see:
 
 - [Click](https://click.palletsprojects.com/en/stable/)
-- [Pyinstaller docs](https://pyinstaller.org/en/stable/)
+- [Poetry](https://python-poetry.org/docs/)
 
 ### Instructions
-1. `pip install pyinstaller`
-2. `pip install click`
-2. `pyinstaller --onefile mycli.py`
-3. (Optional) Run the following command: `./dist/mycli --help`
-4. (Optional) Test the following command: `./dist/mycli greet --name Ian`
-5. Add the `/dist` folder containing `mycli.exe` to your path variable (Windows):
-    ![alt text](static/img/image.png)
-6. Open a new terminal window
-7. Run the following command(s):
 
-    To execute the `greet` command with the `name` parameter:
-    `mycli greet --name Ian`
-    ![alt text](static/img/image-1.png)
+1. `pip install poetry` | `pip install click` #install poetry module
+2. `poetry install` #install project dependencies
+    :::note 
+        If you need to add dependencies again for poetry (it is its own virtual env), use :`poetry add requests`.
+    :::
+3. `poetry run mycli "hello world"` #test the cli
+4. `poetry build` #build the /dist folder
+5. `pip install dist/my_cli_project-0.1.0.tar.gz` # install the cli locally
+6. Open a new terminal window and try the cli: `mycli --help`
+7. (Optional) `poetry publish` #publish to pypi requires credentials
+   ```
+    poetry config repositories.my-repo https://my-repo-url/simple/
+    poetry config http-basic.my-repo username password
+    poetry publish --repository my-repo
+   ```
+7. Open a new terminal window
+8. Run the following command(s):
 
-    To execute the `return_pokemon` command with the `pokemon` parameter:
-    `mycli return_pokemon --pokemon lapras`
-
+    | Command                               | Description                             |
+    |---------------------------------------|-----------------------------------------|
+    | `mycli return_pokemon --pokemon charizard` | Returns data or details about the Pokémon named "charizard". |
+    | `mycli greet --name ian`              | Prints a greeting message for the name "ian". |
+    | `mycli reverse abc`                   | Reverses the string "abc".              |
+    | `mycli cap abc`                       | Capitalizes the string "abc".           |
 
 ### Testing
 
-To test Click apps, [you need a runner](https://click.palletsprojects.com/en/stable/testing/).
-
-For simplicity the `runner.py` is located at the root of the directory.
-
-To run the `runner.py` file to test the click cli, run the following command:
-
+To run the test files in `/tests`, from the root directory execute the following command:
 ```bash
-python runner.py
+poetry run pytest
 ```
+- Todo: possible to use runner.py to test cli commands more effectively? 

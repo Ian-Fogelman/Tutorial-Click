@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "my-cli-project"
 version = "0.1.0"
-packages = [{ include = "my_cli_project" }]
+
 description = "A sample Poetry project with a CLI and custom Python code"
 authors = ["Your Name <ian@example.com>"]
 readme = "README.md"

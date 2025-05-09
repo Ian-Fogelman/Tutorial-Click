@@ -49,3 +49,9 @@ git checkout main
 git tag v0.0.2
 git push origin refs/tags/v0.0.2
 ```
+
+Optionally:
+
+```
+git tag -f v0.0.2 HEAD
+```

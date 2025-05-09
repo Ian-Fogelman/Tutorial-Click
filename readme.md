@@ -41,3 +41,11 @@ poetry run pytest
 ### Tagging 
 
 To add a tag to a branch, use `git tag v0.0.1`.
+
+To trigger a test build, add a tag matching the `v0.0.0` naming convention:
+
+```
+git checkout main
+git tag v0.0.2
+git push origin refs/tags/v0.0.2
+```

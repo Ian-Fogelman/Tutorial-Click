@@ -20,3 +20,6 @@ mycli = "my_cli_project.cli:cli"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.packages]
+include = "my-cli-project"

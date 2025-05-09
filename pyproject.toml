@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "my-cli-project"
+name = "my_cli_project"
 version = "0.0.1"
 
 description = "A sample Poetry project with a CLI and custom Python code"
@@ -15,12 +15,8 @@ requests = "^2.32.3"
 pytest = "^7.1.2"
 
 [tool.poetry.scripts]
-mycli = "my-cli-project.cli:cli"
+mycli = "my_cli_project.cli:cli"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
-
-[[tool.poetry.packages]]
-include = "my-cli-project"
-from = ".."

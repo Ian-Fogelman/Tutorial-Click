@@ -34,6 +34,12 @@ jobs:
         run: |
           poetry config virtualenvs.create false
 
+      - name: Debug directory structure
+        run: |
+          pwd
+          ls -R
+          find /home/runner/work -name README.md
+
       # Step 5: Install dependencies
       - name: Install dependencies
         run: |

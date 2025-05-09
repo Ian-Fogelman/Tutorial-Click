@@ -1,0 +1,51 @@
+name: Build and Publish Python Package
+
+on:
+  push:
+    tags:
+      - 'v*.*.*' # Trigger on version tags like v1.0.0
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write # Required for PyPI trusted publishing
+      contents: read
+
+    steps:
+      # Step 1: Check out the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Set up Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # Specify your preferred Python version
+
+      # Step 3: Install Poetry
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "$HOME/.local/bin" >> $GITHUB_PATH
+
+      # Step 4: Configure Poetry
+      - name: Configure Poetry
+        run: |
+          poetry config virtualenvs.create false
+
+      # Step 5: Install dependencies
+      - name: Install dependencies
+        run: |
+          poetry install --sync --no-interaction
+
+      # Step 6: Build the package
+      - name: Build package
+        run: |
+          poetry build
+
+      # Step 7: Publish to PyPI
+      - name: Publish to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          repository-url: https://upload.pypi.org/legacy/ # Use test.pypi.org for testing

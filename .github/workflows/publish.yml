@@ -37,7 +37,7 @@ jobs:
       # Step 5: Install dependencies
       - name: Install dependencies
         run: |
-          poetry install --sync --no-interaction --no-root
+          poetry install --sync --no-interaction
 
       # Step 6: Build the package
       - name: Build package

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "my-cli-project"
-version = "0.1.0"
+version = "0.0.1"
 
 description = "A sample Poetry project with a CLI and custom Python code"
 authors = ["Your Name <ian@example.com>"]

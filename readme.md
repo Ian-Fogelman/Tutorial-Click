@@ -46,12 +46,12 @@ To trigger a test build, add a tag matching the `v0.0.0` naming convention:
 
 ```
 git checkout main
-git tag v0.0.2
-git push origin refs/tags/v0.0.2
+git tag v0.0.1
+git push origin refs/tags/v0.0.1
 ```
 
 Optionally:
 
 ```
-git tag -f v0.0.2 HEAD
+git tag -f v0.0.1 HEAD
 ```

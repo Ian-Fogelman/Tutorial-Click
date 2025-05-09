@@ -37,3 +37,7 @@ To run the test files in `/tests`, from the root directory execute the following
 poetry run pytest
 ```
 - Todo: possible to use runner.py to test cli commands more effectively? 
+
+### Tagging 
+
+To add a tag to a branch, use `git tag v0.0.1`.

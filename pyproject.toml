@@ -3,7 +3,7 @@ name = "my_cli_project"
 version = "0.0.1"
 
 description = "A sample CLI project build with Poetry."
-authors = ["Your Name <IanFogelman@gmail.com>"]
+authors = ["Ian Fogelman <IanFogelman@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]

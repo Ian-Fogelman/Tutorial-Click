@@ -50,8 +50,21 @@ jobs:
         run: |
           poetry build
 
-      # Step 7: Publish to PyPI
-      - name: Publish to PyPI
-        uses: pypa/gh-action-pypi-publish@release/v1
+      # Step 7: Configure credentials
+      - name: Configure AWS Credentials
+        uses aws-actions/configure-aws-credentials@v4
         with:
-          repository-url: https://upload.pypi.org/legacy/ # Use test.pypi.org for testing
+          aws-access-key-id:${{secrets.AWS_ACCESS_KEY_ID}}
+          aws-access-key-key:${{secrets.AWS_ACCESS_KEY_ID}}
+          aws-region:us-east-1
+
+      # Step 8: Upload to S3
+      - name: Upload file to S3
+        run: |
+          aws s3 sync dist/ s3://bucket/packages/ --exclude "*.whl"
+
+      # Step 9: Publish to PyPI
+      #- name: Publish to PyPI
+      #  uses: pypa/gh-action-pypi-publish@release/v1
+      #  with:
+      #    repository-url: https://upload.pypi.org/legacy/ # Use test.pypi.org for testing

@@ -55,4 +55,3 @@ Optionally:
 ```
 git tag -f v0.0.1 HEAD
 ```
-

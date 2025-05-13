@@ -13,22 +13,13 @@ For details, see:
 3. `poetry run mycli "hello world"` - test the cli
 4. `poetry build` - build the /dist folder
 5. `pip install dist/my_cli_project-0.1.0.tar.gz` - install the cli locally
-6. Open a new terminal window and try the cli: `mycli --help`
-7. (Optional) `poetry publish` - publish to pypi requires credentials
-   ```
-    poetry config repositories.my-repo https://my-repo-url/simple/
-    poetry config http-basic.my-repo username password
-    poetry publish --repository my-repo
-   ```
+6. Open a new terminal window and try the cli: `sf-helper --help`
 7. Open a new terminal window.
    Run the following command(s):
 
-    | Command                               | Description                             |
-    |---------------------------------------|-----------------------------------------|
-    | `mycli return_pokemon --pokemon charizard` | Returns data or details about the Pokémon named "charizard". |
-    | `mycli greet --name ian`              | Prints a greeting message for the name "ian". |
-    | `mycli reverse abc`                   | Reverses the string "abc".              |
-    | `mycli cap abc`                       | Capitalizes the string "abc".           |
+    | Command                               | Description                             | Usage
+    |---------------------------------------|-----------------------------------------| -----------------------------------------|
+    | `sf-helper set_account` | Sets the account identifier for . |
 
 ### Testing
 

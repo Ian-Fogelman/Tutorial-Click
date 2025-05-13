@@ -61,7 +61,7 @@ jobs:
       # Step 8: Upload to S3
       - name: Upload file to S3
         run: |
-          aws s3 sync dist/ s3://gh-package-store/packages/ --exclude "*.whl"
+          aws s3 sync dist/ s3://gh-package-store/packages/my-cli-project --exclude "*.whl"
 
       # Step 9: Publish to PyPI
       #- name: Publish to PyPI
